@@ -27,21 +27,6 @@ public class GeneralController {
     }
 
 
-//    @PostMapping("/UserInformation/{username}")
-//    public String showUserInformation(@PathVariable String username, Model m){
-//        if (userInformationForCaching.getUsername()!= null){
-//            m.addAttribute("info",userInformationForCaching);
-//        }else{
-//            ApplicationUser userInfo = userRepository.findByUsername(username);
-//            m.addAttribute("info",userInfo);
-//
-//        }
-//        return "userinformation";
-//    }
-
 
 }
 
-//
-
-//

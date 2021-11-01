@@ -67,7 +67,7 @@ public String getUser(Principal p, Model model, @PathVariable Long id){
         return "profile.html";
     }
     @GetMapping("/posts")
-    public String allSong(Model m) {
+    public String allpost(Model m) {
 
 
         m.addAttribute("posts",postRepo.findAll() );
