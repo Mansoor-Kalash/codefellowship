@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <a href="/perform_logout">Log Out</a>
+</head>
+<body>
+<header>
+    <div th:insert="fragmentHeader :: header"></div>
+    <h3>Welcome To App</h3>
+    <h3 th:text="${usernamePrincipal}"></h3>
+</header>
+</body>
+</html>
