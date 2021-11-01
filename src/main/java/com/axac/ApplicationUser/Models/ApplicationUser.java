@@ -9,6 +9,7 @@ import java.util.Collection;
 @Entity
 public class ApplicationUser implements UserDetails {
 
+    public static ApplicationUser userInformationForCaching;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
