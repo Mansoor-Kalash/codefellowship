@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{./css/style.css}" rel="stylesheet">
+    <link th:href="@{./css/card.css}" rel="stylesheet">
+
+    <a href="/perform_logout">Log Out</a>
+
+</head>
+<body>
+<header>
+    <div th:insert="fragmentHeader :: header"></div>
+    <h2 th:text="${usernamePrincipal}"></h2>
+</header>
+
+
+<div class="centerize">
+    <figure class="profile" th:each="applicationUser: ${applicationUsers}">
+        <section><img src="//picsum.photos/seed/94/320/320"/></section>
+        <figcaption>
+            <h1 th:text="${applicationUser.username}"></h1>
+            <h2 th:text="${applicationUser.firstName} + ' '+${applicationUser.lastName}"></h2>
+            <p  th:text="${applicationUser.dateOfBirth}"></p>
+            <p  th:text="${applicationUser.bio}"></p>
+            <div class="objectTow" th:each="post:${postsList}">
+                <h2 th:text="${post.id}"></h2>
+                <h2 th:text="${post.body}"></h2>
+                <h2 th:text="${post.createdAt}"></h2>
+            </div>
+            <button>post</button>
+        </figcaption>
+    </figure>
+</div>
+
+<div>
+    <form method="POST" th:action="${'/addpost'}">
+        <input type="text" name="body" id="body"/>
+        <input type="submit"/>
+    </form>
+</div>
+</body>
+</html>
