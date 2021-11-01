@@ -78,7 +78,7 @@ public String getUser(Principal p, Model model, @PathVariable Long id){
     public RedirectView postprofile(Principal p, @RequestParam String body) {
         Post newpost = new Post(body, appUserRepository.findByUsername(p.getName()));
         postRepo.save(newpost);
-        return new RedirectView("/profile");
+        return new RedirectView("/myprofile");
     }
 
 

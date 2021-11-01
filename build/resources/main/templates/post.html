@@ -19,7 +19,11 @@
                 <h2 th:text="${post.id}"></h2>
                 <h2 th:text="${post.body}"></h2>
                 <h2 th:text="${post.createdAt}"></h2>
-            <button>post</button>
+            <a th:href="@{'/user/' + ${post.user_id}}">
+                <span><h2>show user</h2></span>
+            </a>
+
+
         </figcaption>
     </figure>
 </div>

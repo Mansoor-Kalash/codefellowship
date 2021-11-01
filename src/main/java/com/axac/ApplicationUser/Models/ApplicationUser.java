@@ -20,7 +20,7 @@ public class ApplicationUser implements UserDetails {
     private String lastName;
     private String dateOfBirth;
     private String bio;
-    @OneToMany(mappedBy = "applicationUser")
+    @OneToMany(mappedBy = "applicationUser", cascade = CascadeType.ALL)
     List<Post> postList;
 
     public ApplicationUser(){

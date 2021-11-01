@@ -10,11 +10,15 @@ public class Post {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
     private String body;
     private LocalDate createdAt;
     @ManyToOne
+    @JoinColumn(name = "user_id")
     private ApplicationUser applicationUser;
+
+    @Column(name = "user_id",insertable = false, updatable = false)
+    private Long user_id;
     public Post(String body, ApplicationUser applicationUser) {
         this.body = body;
         this.applicationUser = applicationUser;
@@ -29,11 +33,11 @@ public class Post {
     public Post() {
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -50,6 +54,10 @@ public class Post {
 
     public void setCreatedAt(LocalDate createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public Long getUser_id() {
+        return user_id;
     }
 
 

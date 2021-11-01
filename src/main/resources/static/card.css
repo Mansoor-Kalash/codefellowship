@@ -111,3 +111,7 @@ html, body {
 .profile figcaption button:focus {
     border: 4px solid #ccc;
 }
+span{
+    font-size: 100px;
+    border: solid 2px;
+}
