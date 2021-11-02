@@ -64,7 +64,7 @@ public String getUser(Principal p, Model model, @PathVariable Long id){
         model.addAttribute("postsList",postList);
 
 
-        return "profile.html";
+        return "profile";
     }
     @GetMapping("/posts")
     public String allpost(Model m) {
