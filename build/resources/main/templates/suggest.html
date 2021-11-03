@@ -42,26 +42,35 @@
 
 
     <div class="centerize">
-        <figure class="profile" th:each="applicationUser: ${userInformation}">
-            <section><img src="https://upload.wikimedia.org/wikipedia/en/2/24/Crystal_personal.svg"/></section>
+        <span th:if="${users.size() == 0}"><h1>There is no suggested people to follow</h1></span>
+        <figure th:if="${users.size() != 0}" class="profile" th:each="user:${users}">
+            <section><img src="//picsum.photos/seed/94/320/320"/></section>
             <figcaption>
-                <h3>User Name</h3>
-
-                <h1 th:text="${applicationUser.username}"></h1>
-                <h3>Full Name</h3>
-
-                <h2 th:text="${applicationUser.firstName} + ' '+${applicationUser.lastName}"></h2>
-                <h3>Date of birth</h3>
-
-                <p  th:text="${applicationUser.dateOfBirth}"></p>
-                <h3>bio</h3>
-
-                <p  th:text="${applicationUser.bio}"></p>
-
+                <h1 th:text="${user.username}"></h1>
+                <h2 th:text="${user.firstName} + ' '+${user.lastName}"></h2>
+                <p  th:text="${user.dateOfBirth}"></p>
+                <p  th:text="${user.bio}"></p>
+                 <a th:href="@{'/follow/'+${user.id}}"> Follow</a>
 
             </figcaption>
         </figure>
     </div>
+    <div class="centerize">
+        <span th:if="${userss.size() == 0}"><h1>There is no suggested people to follow</h1></span>
+        <figure th:if="${userss.size() != 0}" class="profile" th:each="userr:${userss}">
+            <section><img src="//picsum.photos/seed/94/320/320"/></section>
+            <figcaption>
+                <h1 th:text="${userr.username}"></h1>
+                <h2 th:text="${userr.firstName} + ' '+${userr.lastName}"></h2>
+                <p  th:text="${userr.dateOfBirth}"></p>
+                <p  th:text="${userr.bio}"></p>
+                <a th:href="@{'/follow/'+${userr.id}}"> Un Follow</a>
+
+            </figcaption>
+        </figure>
+    </div>
+
+
 
     <div class="w3-center w3-padding-32">
         <div class="w3-bar">
@@ -121,7 +130,7 @@
         </div>
     </footer>
 
-
+    End page content
 </div>
 
 <script>

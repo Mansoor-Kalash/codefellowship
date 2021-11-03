@@ -13,15 +13,19 @@
 <body>
 <a href="/signup">Click here to signup</a>
 
-<form action="/perform_login" method="post">
-    <label for="username">Username</label>
-    <input type="text" name="username" id="username">
-    <label for="password">Password</label>
-    <input type="text" name="password" id="password">
-    <input type="submit">
-</form>
 
+<div class="login">
+    <div class="form">
+        <form class="login-form" action="/perform_login" method="post">
+            <span class="material-icons">lock</span>
+            <input type="text" name="username" id="username" required />
+            <input type="text" name="password" id="password" placeholder="password" required />
+            <button>login</button>
+        </form>
+    </div>
 </div>
+
+<!--</div>-->
 </body>
 </html>
 
