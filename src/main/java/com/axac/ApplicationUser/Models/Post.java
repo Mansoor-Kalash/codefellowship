@@ -17,6 +17,7 @@ public class Post {
     @JoinColumn(name = "user_id")
     private ApplicationUser applicationUser;
 
+
     @Column(name = "user_id",insertable = false, updatable = false)
     private Long user_id;
     public Post(String body, ApplicationUser applicationUser) {

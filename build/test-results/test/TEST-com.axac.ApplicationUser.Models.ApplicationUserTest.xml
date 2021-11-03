@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.axac.ApplicationUser.Models.ApplicationUserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-02T11:59:16" hostname="mansoors-MBP" time="0.033">
+<testsuite name="com.axac.ApplicationUser.Models.ApplicationUserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-02T14:47:08" hostname="mansoors-MBP" time="0.037">
   <properties/>
-  <testcase name="tsetGetSetFirstName()" classname="com.axac.ApplicationUser.Models.ApplicationUserTest" time="0.033"/>
+  <testcase name="tsetGetSetFirstName()" classname="com.axac.ApplicationUser.Models.ApplicationUserTest" time="0.037"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -20,6 +20,9 @@
     <a href="/signup" onclick="w3_close()" class="w3-bar-item w3-button">Sing UP</a>
     <a href="/myprofile" onclick="w3_close()" class="w3-bar-item w3-button">Profile</a>
     <a href="/posts" onclick="w3_close()" class="w3-bar-item w3-button">posts</a>
+    <a href="/followList"  onclick="w3_close()" class="w3-bar-item w3-button">Feed</a>
+    <a href="/suggest"  onclick="w3_close()" class="w3-bar-item w3-button">Suggest Frinds</a>
+
 
 
 </nav>
@@ -43,7 +46,8 @@
         <div class="w3-quarter" th:each="post:${posts}">
             <img src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5e6e26d9aa5428000759e96c%2Fwomen-washing-purple-water-lilies-in-Vietnam%2F960x0.jpg%3FcropX1%3D0%26cropX2%3D960%26cropY1%3D112%26cropY2%3D954" alt="Sandwich" style="width:100%">
             <h3 th:text="${post.body}">The Perfect Sandwich, A Real NYC Classic</h3>
-            <p th:text="${post.createdAt}"></p>
+
+            <p >Created At: <span th:text="${post.createdAt}"></span></p>
             <h2> <a th:href="@{'/user/' + ${post.user_id}}">
                 <span><h2>show user</h2></span>
             </a></h2>
